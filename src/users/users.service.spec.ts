@@ -8,6 +8,7 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 
 describe('UsersService', () => {
   let service: UsersService;
+  let usersRepository: UsersRepository;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -37,4 +38,18 @@ describe('UsersService', () => {
       expect(service.findAll());
     });
   });
+
+  describe('UserService.findOne ', () => {
+    it('should return an user', async () => {
+        var tuser = new Users;
+        tuser.id = 1;
+        const result = new Promise<Users>((resolve, reject) => {
+            setTimeout(() => {
+                resolve(tuser);
+            }, 300);
+        });
+        jest.spyOn(usersRepository, 'findOne').mockImplementation(() => result);
+        expect(await service.findOne(1)).toBe(result);
+    });
+});
 });

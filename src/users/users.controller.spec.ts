@@ -41,4 +41,21 @@ describe('UsersController', () => {
       expect(controller.findAll()).toBe(data);
     });
   });
+
+  describe('Find an User', () => {
+    it('should return an array of an user', async () => {
+      usersService.findOne = jest.fn();
+      const data = controller.findOne('1');
+      expect(controller.findOne('1')).toBe(data);
+    });
+  });
+
+  describe('Delete an User', () => {
+    it('should delete an user', async () => {
+        usersService.remove = jest.fn();
+        const data = controller.remove("1");
+        expect(controller.remove("1")).toBe(data);
+    });
+});
+
 });
