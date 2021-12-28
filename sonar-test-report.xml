@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-    <file path="/home/vagrant/ue-3-dw24-s3/src/users/users.controller.spec.ts">
-        <testCase name="UsersController should be defined" duration="14"/>
-        <testCase name="UsersController Find all Users should return an array of users" duration="6"/>
-        <testCase name="UsersController Find an User should return an array of an user" duration="5"/>
-        <testCase name="UsersController Delete an User should delete an user" duration="4"/>
-    </file>
     <file path="/home/vagrant/ue-3-dw24-s3/src/users/users.service.spec.ts">
-        <testCase name="UsersService should be defined" duration="5"/>
-        <testCase name="UsersService UserService.findAll should return an array of users" duration="8"/>
-        <testCase name="UsersService UserService.findOne  should return an user" duration="5">
-            <failure message="Error: Cannot spyOn on a primitive value; undefined given"><![CDATA[Error: Cannot spyOn on a primitive value; undefined given
-    at ModuleMocker.spyOn (/home/vagrant/ue-3-dw24-s3/node_modules/jest-mock/build/index.js:785:13)
-    at Object.<anonymous> (/home/vagrant/ue-3-dw24-s3/src/users/users.service.spec.ts:51:14)
-    at Promise.then.completed (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/run.js:218:40)
-    at _runTest (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/run.js:66:9)
-    at _runTestsForDescribeBlock (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/run.js:60:9)
-    at _runTestsForDescribeBlock (/home/vagrant/ue-3-dw24-s3/node_modules/jest-circus/build/run.js:60:9)]]></failure>
-        </testCase>
+        <testCase name="UsersService should be defined" duration="11"/>
+        <testCase name="UsersService UserService.findAll should return an array of users" duration="3"/>
+        <testCase name="UsersService UserService.findOne  should return an user" duration="3"/>
+        <testCase name="UsersService UserService.create should create an user" duration="3"/>
+        <testCase name="UsersService UserService.update should update an user" duration="4"/>
+        <testCase name="UsersService UserService.remove should delete an user" duration="3"/>
+    </file>
+    <file path="/home/vagrant/ue-3-dw24-s3/src/users/users.controller.spec.ts">
+        <testCase name="UsersController should be defined" duration="5"/>
+        <testCase name="UsersController Find all Users should return an array of users" duration="7"/>
+        <testCase name="UsersController Find an User should return an array of an user" duration="3"/>
+        <testCase name="UsersController Delete an User should delete an user" duration="3"/>
+        <testCase name="UsersController Create an User should delete an user" duration="3"/>
+        <testCase name="UsersController Update an User should delete an user" duration="4"/>
     </file>
     <file path="/home/vagrant/ue-3-dw24-s3/src/app.controller.spec.ts">
-        <testCase name="AppController root should return &quot;Hello World!&quot;" duration="3"/>
+        <testCase name="AppController root should return &quot;Hello World!&quot;" duration="4"/>
     </file>
 </testExecutions>

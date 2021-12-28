@@ -13,17 +13,17 @@ export class UsersService {
     @InjectRepository(Users)
     private usersRepository: Repository<Users>
   ) {}
-
-  create(createUserDto: CreateUserDto) {
-    return this.usersRepository.save(createUserDto);
-  }
-
+  
   findAll() {
     return this.usersRepository.find();
   }
 
   findOne(id: number) {
     return this.usersRepository.findOne(id);
+  }
+
+  create(createUserDto: CreateUserDto) {
+    return this.usersRepository.save(createUserDto);
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
